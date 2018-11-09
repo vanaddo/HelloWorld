@@ -1,0 +1,148 @@
+import javax.sound.midi.Soundbank;
+import java.awt.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+
+/* Car myCar = new Car(25.5,
+         "1BC32E",
+          Color.BLUE,
+          true);
+
+    Car sallyCar = new Car(13.9,
+            "3D20BN",
+            Color.BLACK,
+           false);
+    System.out.println("My Car's License Plate: " + myCar.licensePlate);
+  System.out.println("My Car's License Plate: " + sallyCar.licensePlate);
+    System.out.println(sallyCar.paintColor.toString());
+    myCar.changePaintColor(Color.RED);
+   System.out.println(myCar.paintColor.toString());
+
+   double myCarSpeed = 50;
+    myCarSpeed = myCar.speedingUp(myCarSpeed);
+    System.out.println(myCarSpeed);*/
+
+
+
+
+    /*System.out.println("Enter a word");
+    Scanner sc = new Scanner(System.in);
+
+
+    String userInput = sc.next();
+
+    String uppercased= userInput.toUpperCase();
+    System.out.println(userInput);
+    System.out.println(uppercased);
+
+    char firstCharacter = userInput.charAt(0);
+    System.out.println(firstCharacter);
+    System.out.println("Contains: " + userInput.contains("Enter".toLowerCase()));
+*/
+
+   /* int[] numbers = new int[5]; //sets the size of the array
+    numbers[0] = 31;
+    numbers[1] = 45;
+    numbers[2] = 22;
+    numbers[3] = 98;
+    numbers[4] = 10;
+
+    int[] numbers2 = {31,45,22,98,10}; //this declares, allocates, & initializes array in one line
+    Arrays.sort(numbers);
+    System.out.println(Arrays.toString(numbers));
+
+    String [] myFavoriteCandyBars = {"Twix", "Hershey's", "Crunch"};
+    System.out.println("Index 1: " + myFavoriteCandyBars[1]);
+    myFavoriteCandyBars[2] = "Butterfinger";
+    System.out.println("Index 2; " + myFavoriteCandyBars[2]);
+    System.out.println("Length: " + myFavoriteCandyBars.length);
+
+    System.out.println(Array.get(myFavoriteCandyBars, 2));
+*/
+
+ /*  String s = "dog";
+   String replacedF = s.replace('d', 'f');
+    System.out.println(replacedF);
+    */
+
+   /*   Dog topDog = new Dog("Tom", 2);
+
+      Dog puppyDog = new Dog("Sal",1);
+
+      int dogYears = topDog.dogYears();
+    System.out.println(topDog.name + " is " + topDog.dogYears() +" years old in dog years.");
+    System.out.println(puppyDog.name + " is " +  puppyDog.dogYears() +" years old in dog years.");
+    puppyDog.fetch();
+    topDog.fetch();
+    puppyDog.dogAttack();
+    */
+
+    /*System.out.println("Enter an age: ");
+    Scanner in = new Scanner(System.in);
+    int age = in.nextInt();
+
+    if (age >= 0 && age <= 5) {
+      System.out.println("Baby");
+    } else if (age >= 6 && age <= 11) {
+      System.out.println("Kid");
+    } else if (age >= 12 && age <= 17) {
+      System.out.println("Teen");
+    } else if (age >= 18) {
+      System.out.println("Adult");
+    }else {
+      System.out.println("Invalid");
+    }
+    System.out.println("Thanks for using this program!");
+    */
+  /*  System.out.println("This is a visual example of a WHILE LOOP");
+    int x =3;
+
+    while (x > 0){
+      System.out.println("Current x: "+ x);
+      x = x-1;
+    }
+
+    System.out.println("Final x: " + x);
+    System.out.println();
+*/
+    /*System.out.println("This is a visual example of a DO WHILE LOOP");
+    int y = 3;
+    do{
+      System.out.println("Current y : " +y);
+      y = y-1;
+    } while (y >0);
+    System.out.println("Final y: "+y);
+    System.out.println();
+    */
+  /*  57. Write a Java program to accepts an integer and count the factors of the number. Go to the editor
+    Sample Output:
+
+    Input: an integer: 25
+    Output: 3
+*/
+    Scanner sc = new Scanner(System.in);
+
+    int num = sc.nextInt();
+
+    int result = 0;
+
+    for(int i = 1; i <= (int)Math.sqrt(num);i++){
+
+
+      if(num%i == 0 && i*i != num){
+
+        result += 2;
+      }
+      else if( i*i == num){
+
+        result++;
+
+      }
+    }
+    System.out.println(result);
+  }
+
+}
