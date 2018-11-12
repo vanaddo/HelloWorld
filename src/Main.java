@@ -117,32 +117,109 @@ public class Main {
     System.out.println("Final y: "+y);
     System.out.println();
     */
-  /*  57. Write a Java program to accepts an integer and count the factors of the number. Go to the editor
-    Sample Output:
 
-    Input: an integer: 25
-    Output: 3
-*/
-    Scanner sc = new Scanner(System.in);
+    //Call exercises
+/*    System.out.println("Start!");
 
-    int num = sc.nextInt();
+    checkIfOdd();
 
-    int result = 0;
+    System.out.println("\n ---------------------------------------------------- ");
 
-    for(int i = 1; i <= (int)Math.sqrt(num);i++){
+    findNumOfFactors();
+    System.out.println("\n ----------------------------------------------------");
+
+    findTheAverage();
+    System.out.println("\n ----------------------------------------------------");
+
+    findExponent();
+    System.out.println("\n...End. Bye Bye!");
+    */
 
 
-      if(num%i == 0 && i*i != num){
+    System.out.println("Select an exercise:");
+    System.out.println("\n Odd");
+    System.out.println("\n Factor");
+    System.out.println("\n Average");
+    System.out.println("\n Exponent");
 
-        result += 2;
-      }
-      else if( i*i == num){
+    Scanner in = new Scanner(System.in);
+     String input = in.next();
+     String solution = input.toLowerCase();
 
-        result++;
+     switch (solution){
+       case "factor":
+         findNumOfFactors();
+         break;
+       case "average":
+         findTheAverage();
+        break;
+       case "odd":
+         checkIfOdd();
+         break;
+       case"exponent":
+         findExponent();
+         break;
+       default:
+         System.out.println("Please pick an option");
 
-      }
-    }
-    System.out.println(result);
+
+     }
+
+
   }
 
+  public static void checkIfOdd(){
+
+    System.out.println("Enter a number to see if it's even or odd:  ");
+    Scanner sc = new Scanner(System.in);
+    int number = sc.nextInt();
+
+    boolean odd = Excercise.isOdd(number);
+
+    if(odd){
+      System.out.printf("%d is an odd number.",number);
+    }
+    else {
+      System.out.printf("%d is an even number.",number);
+    }
+  }
+
+public static void findNumOfFactors(){
+  System.out.println("Enter a number to find the number of factors.");
+  Scanner sc = new Scanner(System.in);
+  int num = sc.nextInt();
+
+  int numOfFactors =  Excercise.factors(num);
+
+  System.out.printf("%d has %d factors,", num, numOfFactors);
+}
+
+public static void findTheAverage(){
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Enter 3 numbers to get their average :");
+  System.out.println("Input 1");
+  int num1 = sc.nextInt();
+  System.out.println("Input 2");
+  int num2 = sc.nextInt();
+  System.out.println("Input 3");
+  int num3 = sc.nextInt();
+
+  int average = Excercise.avgOfNums(num1,num2,num3);
+
+  System.out.printf("The average of %d, %d, & %d is %d.",num1,num2,num3,average);
+}
+
+public static void findExponent(){
+    Scanner sc = new Scanner(System.in);
+
+    System.out.println("Enter the base: ");
+    int base = sc.nextInt();
+    System.out.println("Enter the exponent: ");
+    int exp = sc.nextInt();
+
+    int toThePowerOf = Excercise.exponent(base,exp);
+
+    System.out.printf("%d raised to the power of %d is : %d", base, exp, toThePowerOf);
+
+  }
 }
