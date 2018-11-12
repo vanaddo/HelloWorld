@@ -1,7 +1,3 @@
-import javax.sound.midi.Soundbank;
-import java.awt.*;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
@@ -137,6 +133,7 @@ public class Main {
 
 
     System.out.println("Select an exercise:");
+    System.out.println("-------------------");
     System.out.println("\n Odd");
     System.out.println("\n Factor");
     System.out.println("\n Average");
@@ -168,13 +165,13 @@ public class Main {
 
   }
 
-  public static void checkIfOdd(){
+  private static void checkIfOdd(){
 
     System.out.println("Enter a number to see if it's even or odd:  ");
     Scanner sc = new Scanner(System.in);
     int number = sc.nextInt();
 
-    boolean odd = Excercise.isOdd(number);
+    boolean odd = Exercise.isOdd(number);
 
     if(odd){
       System.out.printf("%d is an odd number.",number);
@@ -184,17 +181,17 @@ public class Main {
     }
   }
 
-public static void findNumOfFactors(){
+private static void findNumOfFactors(){
   System.out.println("Enter a number to find the number of factors.");
   Scanner sc = new Scanner(System.in);
   int num = sc.nextInt();
 
-  int numOfFactors =  Excercise.factors(num);
+  int numOfFactors =  Exercise.factors(num);
 
   System.out.printf("%d has %d factors,", num, numOfFactors);
 }
 
-public static void findTheAverage(){
+private static void findTheAverage(){
   Scanner sc = new Scanner(System.in);
   System.out.println("Enter 3 numbers to get their average :");
   System.out.println("Input 1");
@@ -204,12 +201,12 @@ public static void findTheAverage(){
   System.out.println("Input 3");
   int num3 = sc.nextInt();
 
-  int average = Excercise.avgOfNums(num1,num2,num3);
+  int average = Exercise.avgOfNums(num1,num2,num3);
 
   System.out.printf("The average of %d, %d, & %d is %d.",num1,num2,num3,average);
 }
 
-public static void findExponent(){
+private static void findExponent(){
     Scanner sc = new Scanner(System.in);
 
     System.out.println("Enter the base: ");
@@ -217,7 +214,7 @@ public static void findExponent(){
     System.out.println("Enter the exponent: ");
     int exp = sc.nextInt();
 
-    int toThePowerOf = Excercise.exponent(base,exp);
+    int toThePowerOf = Exercise.exponent(base,exp);
 
     System.out.printf("%d raised to the power of %d is : %d", base, exp, toThePowerOf);
 

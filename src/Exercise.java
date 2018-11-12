@@ -1,4 +1,4 @@
-public class Excercise {
+class Exercise {
 
   /*
   Write a method called exponent(int base, int exp) that returns an int value of base raises to the power of exp. The signature of the method is:
@@ -13,7 +13,7 @@ public class Excercise {
           3 raises to the power of 4 is: 81
 */
 
-  public static int exponent(int base, int exp) {
+  static int exponent(int base, int exp) {
     int product = 1; //you want to start your product/total at 1 cause if you start at 0 and multiply by each iteration you'd get 0. Same with
     for (int i = 1; i <= exp; i++) {
       product *= base;
@@ -23,15 +23,14 @@ public class Excercise {
   }
 
   //Find the average of 3 numbers
-  public static int avgOfNums(int num1, int num2, int num3) {
+  static int avgOfNums(int num1, int num2, int num3) {
 
-    int avg = (num1 + num2 + num3) / 3;
+   return (num1 + num2 + num3) / 3;
 
-    return avg;
   }
 
   //Write a Java program to accepts an integer and count the factors of the number.
-  public static int factors(int num) {
+   static int factors(int num) {
     int result = 0;
 
     for (int i = 1; i <= (int) Math.sqrt(num); i++) {
@@ -50,7 +49,7 @@ public class Excercise {
   }
 
   //Write a boolean method called isOdd() in a class called OddEvenTest, which takes an int as input and returns true if the it is odd.
-  public static boolean isOdd(int number) {
+  static boolean isOdd(int number) {
     if (number % 2 == 0) {
       return false;
 
